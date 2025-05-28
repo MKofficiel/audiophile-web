@@ -3,7 +3,25 @@
 
 :root {
   --primary: #d87d4a;
-  --secondary: #101010;
+  --background: #101010;
   --tertiary: #f1f1f1;
   --quatiary: #fafafa;
+  --menu: #101010;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-cta: var(--primary);
+  --font-manrope: "Manrope", sans-serif;
+  --color-menu: var(--menu);
+}
+
+body {
+  font-family: var(--font-manrope);
+}
+
+@layer base {
+  .container {
+    @apply mx-auto max-w-[1110px] px-[60px] max-md:px-[39px] max-sm:px-[24px];
+  }
 }
